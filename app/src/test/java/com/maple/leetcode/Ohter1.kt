@@ -26,7 +26,7 @@ class Ohter1 {
 
     // 先手，每次1-3，拿最后一个，胜利
     // 思路：保留4的倍数给对方，我方必赢
-    fun canWinNim(n: Int): Boolean {
+    private fun canWinNim(n: Int): Boolean {
         return n % 4 != 0
     }
 
