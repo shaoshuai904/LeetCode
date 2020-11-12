@@ -5,7 +5,16 @@ import java.util.*
 import kotlin.Comparator
 
 /**
+ * [★★]
  * 给定一个非空的整数数组，返回其中出现频率前 k 高的元素。
+ *
+ * 示例:
+ * 输入: nums = [1,1,1,2,2,3], k = 2
+ * 输出: [1,2]
+ *
+ * 输入: nums = [1], k = 1
+ * 输出: [1]
+ *
  * https://leetcode-cn.com/problems/top-k-frequent-elements/
  *
  * @author maple
@@ -22,7 +31,7 @@ class UnitTest347 {
     /**
      * 给定一个非空的整数数组，返回其中出现频率前 k 高的元素。
      */
-    private fun topKFrequent(nums: IntArray, k: Int): List<Int> {
+    private fun topKFrequent(nums: IntArray, k: Int): IntArray {
         val map = hashMapOf<Int, Int>()
         for (num in nums) {
             val size = map.getOrDefault(num, 0)
@@ -44,7 +53,7 @@ class UnitTest347 {
         while (pq.isNotEmpty()) {
             ret.add(pq.remove())
         }
-        return ret
+        return ret.toIntArray()
     }
 
 }
