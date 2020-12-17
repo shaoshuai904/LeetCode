@@ -20,7 +20,7 @@ import org.junit.Test
  * @author maple
  * @time 2019-08-18
  */
-class UnitTest50 {
+class LeetCode50 {
 
     @Test
     fun runTest() {

@@ -20,7 +20,7 @@ import kotlin.Comparator
  * @author maple
  * @time 2019-08-18
  */
-class UnitTest347 {
+class LeetCode347 {
 
     @Test
     fun runTest() {

@@ -18,7 +18,7 @@ import org.junit.Test
  * @author maple
  * @time 2020-11-12
  */
-class UnitTest922 {
+class LeetCode922 {
 
     @Test
     fun runTest() {

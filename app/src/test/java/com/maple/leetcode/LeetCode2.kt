@@ -18,7 +18,7 @@ import org.junit.Test
  * @author maple
  * @time 2020-11-10
  */
-class UnitTest2 {
+class LeetCode2 {
 
     class ListNode(var `val`: Int, var next: ListNode? = null) {
         override fun toString(): String {
