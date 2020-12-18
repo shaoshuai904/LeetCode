@@ -40,9 +40,13 @@ class LeetCode3 {
 
     @Test
     fun runTest() {
-        val sum = lengthOfLongestSubstring("bpfbhmipx")
+        val test = "bpfbhmipx"
+        val sum = lengthOfLongestSubstring(test)
         println("return data: $sum ")
+        val sum2 = lengthOfLongestSubstring2(test)
+        println("return data: $sum2 ")
     }
+
 
     fun lengthOfLongestSubstring(s: String): Int {
         if (s.length == 1) return 1
@@ -59,6 +63,24 @@ class LeetCode3 {
             }
             map[char] = index
             maxSize = Math.max(maxSize, map.size)
+        }
+        return maxSize
+    }
+
+    // 窗口移动法
+    fun lengthOfLongestSubstring2(s: String): Int {
+        var maxSize = 0
+        val set = hashSetOf<Char>()
+        var rp = 0
+        s.forEachIndexed { index, char ->
+            if (index != 0) {
+                set.remove(s[index - 1])
+            }
+            while (rp < s.length && !set.contains(s[rp])) {
+                set.add(s[rp])
+                rp++
+            }
+            maxSize = Math.max(maxSize, rp - index)
         }
         return maxSize
     }
